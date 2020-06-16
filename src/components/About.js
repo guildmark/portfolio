@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 
-function Work(){
+function About()  {
+
     return(
         <div>
             
         </div>
     )
 }
-export default Work;
+export default About;
