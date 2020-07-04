@@ -4,4 +4,6 @@ h2 {
 
 .imageLink {
   width: 25%;
+  display: inline-block;
+  
 }
