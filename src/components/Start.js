@@ -15,14 +15,16 @@ return(
         <p>Found out more about me below</p>
         {/* Add buttons with images for work and about */}
         <Link to="/Work" href="#" >
-            <p>My work</p>
+           
             <img className="imageLink" src={Code} alt="Work Link"/>
         </Link>
         <Link to="/About" href="#" >
-            <p>About me</p>
+            
              <img className="imageLink" src={About} alt="Link to information"/>
         </Link>
-        <Link to="/Contact" href="#" ></Link>
+        <Link to="/Contact" href="#" >
+    
+        </Link>
     
     </div>
 )
