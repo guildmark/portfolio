@@ -12,20 +12,20 @@ return(
     <div>
         {/* Add image with MK logo */}
         <h2>Hi, I'm marcus!</h2>
-        <p>Found out more about me below</p>
+        <p className="centerParagraph">Found out more about me below</p>
         {/* Add buttons with images for work and about */}
-        <Link to="/Work" href="#" >
-           
-            <img className="imageLink" src={Code} alt="Work Link"/>
-        </Link>
-        <Link to="/About" href="#" >
-            
-             <img className="imageLink" src={About} alt="Link to information"/>
-        </Link>
-        <Link to="/Contact" href="#" >
-    
-        </Link>
-    
+        <div>
+            <Link to="/Work" href="#" >
+                <img className="imageLink" src={About} alt="Link to information"/>
+            </Link>
+            <Link to="/About" href="#" >
+        
+                <img className="imageLink" src={About} alt="Link to information"/>
+            </Link>
+            <Link to="/Contact" href="#" >
+            <img className="imageLink" src={About} alt="Link to information"/>
+            </Link>
+        </div>
     </div>
 )
 }
