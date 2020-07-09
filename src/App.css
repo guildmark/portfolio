@@ -12,9 +12,8 @@ h2 {
 .centerParagraph {
   text-align: center;
 }
-.center {
-  position: relative;          /* where the next element will be automatically positioned */
-  display: inline-block;       /* causes element width to shrink to fit content */
-  left: 50%;                   /* moves left side of image/element to center of parent element */
-  transform: translate(-50%);  /* centers image/element on "left: 50%" position */
+.center {          /* where the next element will be automatically positioned */
+  text-align: center;
+  display: block;
+  width: 100%;
 }

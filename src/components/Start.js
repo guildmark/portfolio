@@ -14,12 +14,12 @@ return(
         <h2>Hi, I'm marcus!</h2>
         <p className="centerParagraph">Found out more about me below</p>
         {/* Add buttons with images for work and about */}
-        <div>
+        <div className="center">
             <Link to="/Work" href="#" >
                 <img className="imageLink" src={About} alt="Link to information"/>
             </Link>
             <Link to="/About" href="#" >
-        
+
                 <img className="imageLink" src={About} alt="Link to information"/>
             </Link>
             <Link to="/Contact" href="#" >
