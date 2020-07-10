@@ -4,9 +4,13 @@ h2 {
 
 .imageLink {
   width: 25%;
-
   padding: 10px;
   border-radius: 2%;
+}
+
+.imageLink:hover {
+  background-color: goldenrod;
+  width: 26%;
 }
 
 .centerParagraph {
