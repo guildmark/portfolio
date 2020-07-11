@@ -7,7 +7,7 @@ app.listen(port, () => {
     console.log(`Server is connected to port  + ${port}`)
 });
 
-//Send GET request
+//Create GET route
 app.get("/express_backend", (req, res) => {
     res.send({ express: "Your express backend is connected to react"});
 })
