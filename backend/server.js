@@ -9,7 +9,7 @@ app.use(express.json());
 
 //Start server and listen to port
 app.listen(port, () => {
-    console.log(`Server is connected to port  + ${port}`)
+    console.log(`Server is connected to port ${port}`)
 });
 
 //Create GET route

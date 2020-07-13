@@ -25,7 +25,7 @@ function App() {
   //Make GET request to backend
   const callBackend = async () => {
     
-    const response = await axios.get('http://localhost:5000/express_backend');
+    const response = await fetch('/express_backend');
     console.log("response: " + response);
 
     const body = await response.json();
