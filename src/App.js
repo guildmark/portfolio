@@ -15,13 +15,21 @@ function App() {
   const [data, setData] = useState(null);
 
 
-
+  useEffect(() => {
+    callBackend()
+    .then(res => setData((res)))
+    .catch(err => console.log(err));
+    
+  });
 
   //Make GET request to backend
   const callBackend = async () => {
     
-    const response = await fetch("/express_backend");
+    const response = await axios.get('http://localhost:5000/express_backend');
+    console.log("response: " + response);
+
     const body = await response.json();
+    console.log("body: " + body);
     
     if(response !== 200) {
       throw Error(body.message);
