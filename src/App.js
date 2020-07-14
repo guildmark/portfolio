@@ -14,7 +14,7 @@ function App() {
 
   const [data, setData] = useState(null);
 
-
+/*
   useEffect(() => {
     callBackend()
     .then(res => setData((res)))
@@ -25,19 +25,12 @@ function App() {
   //Make GET request to backend
   const callBackend = async () => {
     
-    const response = await fetch('/express_backend');
-    console.log("response: " + response);
-
-    const body = await response.json();
-    console.log("body: " + body);
+    await axios.get("http://localhost:5000/express_backend")
+    .then(res => res.json())
+    .then(data => setData(data));
     
-    if(response !== 200) {
-      throw Error(body.message);
-    }
-    
-    return body;
   }
-
+*/
   return (
     <Router>
     <div>
