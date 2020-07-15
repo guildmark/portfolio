@@ -11,11 +11,6 @@ function Start() {
 
     const [data, setData] = useState(null);
 
-const testBackend = () => {
-    axios.get("http://localhost:5000/express_backend")
-    .then(res => console.log(res.data));
-    
-}    
 
 return(
     <div>
@@ -35,10 +30,6 @@ return(
             <img className="imageLink" src={About} alt="Link to information"/>
             </Link>
 
-            <button onClick={testBackend}>TEST</button>
-            <div>
-                <p>data: {data}</p>
-            </div>
         </div>
     </div>
 )

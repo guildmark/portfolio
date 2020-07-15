@@ -14,23 +14,23 @@ function App() {
 
   const [data, setData] = useState(null);
 
-/*
+
   useEffect(() => {
     callBackend()
     .then(res => setData((res)))
     .catch(err => console.log(err));
     
-  });
+  }, []);
 
   //Make GET request to backend
   const callBackend = async () => {
     
     await axios.get("http://localhost:5000/express_backend")
-    .then(res => res.json())
-    .then(data => setData(data));
+    .then(res => setData(res.data));
+    
     
   }
-*/
+
   return (
     <Router>
     <div>
@@ -39,8 +39,6 @@ function App() {
       <Route path="/Work" exact component={Work} />
       <Route path="/Contact" exact component={Contact}/>
 
-      {/* TEST ROUTING AND BACKEND */}
-      <p>DATA: {data}</p>
     </div>
   </Router>
   );

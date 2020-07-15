@@ -16,8 +16,12 @@ h2 {
 .centerParagraph {
   text-align: center;
 }
-.center {          /* where the next element will be automatically positioned */
+.center {          
   text-align: center;
   display: block;
   width: 100%;
+}
+
+form {
+  width: 500px;
 }
