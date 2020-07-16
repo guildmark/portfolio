@@ -30,12 +30,15 @@ var transporter = nodemailer.createTransport({
 });
 
 
+app.get('/send', (req, res) => {
+    res.send({TEST: "TEST RECIEVED!"});
+})
 
 //Create a POST route for sending mails
-app.post('/send'), (req, res) => {
+app.post('/send', (req, res) => {
 
     var mailOptions = {
-        name: req.body.name,
+        from: req.body.name,
         to: creds.USER,
         subject: req.body.subject,
         text: req.body.content
@@ -51,7 +54,7 @@ app.post('/send'), (req, res) => {
     });
 
     res.send({mail: "Mail has been sent!"});
-}
+})
 
 
 

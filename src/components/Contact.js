@@ -39,7 +39,8 @@ function Contact() {
         }
 
         axios.post("http://localhost:5000/send", mail)
-        .then(res => console.log(res.data));
+        .then(res => console.log(res.data))
+        .then(mail => console.log(mail));
 
     }
     //Function to reset the form with the help of a button click
@@ -63,12 +64,12 @@ function Contact() {
                 <div>
                     <label>Subject</label>
                     <br/>
-                    <input type="text" className="form-control"/>
+                    <input type="text" className="form-control" onChange={changeSubject}/>
                 </div>
                 <div>
                     <label>Description</label>
                     <br/>
-                    <textarea className="form-control" cols="20" rows="5"/>
+                    <textarea className="form-control" cols="20" rows="5" onChange={changeContent}/>
                 </div>
                 <div className="form-group">
                     <input type="submit" value="Send" className="btn btn-primary" onClick={submitMail}/>
