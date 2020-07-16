@@ -29,18 +29,29 @@ var transporter = nodemailer.createTransport({
    
 });
 
-var mailOptions = {
-    name: "dinkydonut",
-    to: creds.USER,
-    subject: "TEST",
-    text: "TEST"
+
+
+//Create a POST route for sending mails
+app.post('/send'), (req, res) => {
+
+    var mailOptions = {
+        name: req.body.name,
+        to: creds.USER,
+        subject: req.body.subject,
+        text: req.body.content
+    }
+
+    transporter.sendMail(mailOptions, function(error, info) {
+        if(error) {
+            console.log(error)
+        }
+        else {
+            console.log("Email sent: " + info.response)
+        }
+    });
+
+    res.send({mail: "Mail has been sent!"});
 }
 
-transporter.sendMail(mailOptions, function(error, info) {
-    if(error) {
-        console.log(error)
-    }
-    else {
-        console.log("Email sent: " + info.response)
-    }
-});
+
+

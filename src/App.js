@@ -28,7 +28,6 @@ function App() {
     await axios.get("http://localhost:5000/express_backend")
     .then(res => setData(res.data));
     
-    
   }
 
   return (
