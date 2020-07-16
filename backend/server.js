@@ -40,7 +40,7 @@ app.post('/send', (req, res) => {
     var mailOptions = {
         from: req.body.name,
         to: creds.USER,
-        subject: req.body.subject,
+        subject: "(" + req.body.name + ") " +  req.body.subject,
         text: req.body.content
     }
 

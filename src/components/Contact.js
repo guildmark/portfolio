@@ -40,7 +40,7 @@ function Contact() {
 
         axios.post("http://localhost:5000/send", mail)
         .then(res => console.log(res.data))
-        .then(mail => console.log(mail));
+        
 
     }
     //Function to reset the form with the help of a button click
@@ -52,9 +52,13 @@ function Contact() {
     
     return (
         <div>
-            <h3>Contact</h3>
-
+            <h2>Contact</h2>
+            <div className="info">
+                <p>Phone: 073 84 99 301</p>
+                <p>Mail: guildmark@gmail.com</p>
+            </div>
             {/*Add contact form and connect this to my mail*/}
+            <h2>Or shoot a quick message directly to my mail below!</h2>
             <form>
                 <div>
                     <label>Name</label>
